@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<robot name="workcell" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link name="world"/>
+
+  <!-- Include Robot definition here -->
+<xacro:include filename="$(find abb_irb2400_support)/urdf/irb2400_macro.xacro"/>
+<xacro:abb_irb2400 prefix=""/>
+  <!--   - don't forget joint to connect world_frame to robot's base_link -->
+<joint name="world_to_robot" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint> 
+
+  <!-- Include Workpiece definition here -->
+<link name="workpiece">
+  <visual>
+    <geometry>
+      <box size="1.0 1.0 0.5"/>
+    </geometry>
+    <origin xyz="0 0 0.25"/>
+  </visual>
+</link> 
+
+<joint name="world_to_workpiece" type="fixed">
+  <parent link="world"/>
+  <child link="workpiece"/>
+  <origin xyz="1 0 0"/>
+</joint> 
+
+  <!-- Include Gripper definition here -->
+<link name="gripper">
+  <visual>
+    <geometry>
+      <mesh filename="package://lesson_xacro/meshes/gripper.STL"/>
+      <box size="1.0 1.0 0.5"/>
+    </geometry>
+<material name="gray">
+  <color rgba="0.8 0.8 0.8 1.0"/>
+</material>
+    <origin xyz="0 0 0.25"/>
+  </visual>
+</link> 
+
+
+  <!--    - connect gripper to robot tool0 frame -->
+<joint name="tool_to_gripper" type="fixed">
+  <parent link="tool0"/>
+  <child link="gripper"/>
+  <origin xyz="0 0 -0.25"/>
+</joint>
+
+  <!-- Include extra pieces here -->
+</robot>
+

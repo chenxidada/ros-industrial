@@ -1,0 +1,2 @@
+key_teleop:lesson_xacro
+-DCATKIN_DEVEL_PREFIX=/home/ros-industrial/industrial_training/training/work/2.5b/devel -DCMAKE_INSTALL_PREFIX=/home/ros-industrial/industrial_training/training/work/2.5b/install -G Unix Makefiles

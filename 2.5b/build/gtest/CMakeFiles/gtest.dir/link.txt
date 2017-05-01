@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -g   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/ros-industrial/industrial_training/training/work/2.5b/build/gtest/src -lpthread -Wl,-rpath,/home/ros-industrial/industrial_training/training/work/2.5b/build/gtest/src 

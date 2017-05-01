@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "key_teleop")
+set(key_teleop_MAINTAINER "ros-industrial <ros-industrial@todo.todo>")
+set(key_teleop_DEPRECATED "")
+set(key_teleop_VERSION "0.0.0")
+set(key_teleop_BUILD_DEPENDS "roscpp")
+set(key_teleop_RUN_DEPENDS "roscpp")
+set(key_teleop_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,8 @@
+prefix=/home/ros-industrial/industrial_training/training/work/2.5b/install
+
+Name: lesson_xacro
+Description: Description of lesson_xacro
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/ros-industrial/industrial_training/training/work/2.5b/install/lib 
+Requires: 
